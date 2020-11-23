@@ -1,10 +1,9 @@
-# Write your code here.
 def badge_maker(name)
-  return "Hello my name is #{name}."
+  return "Hello, my name is #{name}."
 end
 
 def batch_badge_creator(speakers)
-  badge_message = []
+  badge_messages = []
   speakers.each do |speaker|
     message = badge_maker(speaker)
     badge_messages << message
@@ -14,9 +13,9 @@ end
 
 def assign_rooms(speakers)
   room_number = 1
-  room_message + []
+  room_messages = []
   speakers.each do |speaker|
-    room_messages = "Helo #{speaker}! You'll be assisgned to room #{room_number}!"
+    room_messages << "Hello, #{speaker}! You'll be assigned to room #{room_number}!"
     room_number += 1
   end
   room_messages
@@ -27,8 +26,8 @@ def printer(speakers)
   badge_messages.each do |message|
     puts message
   end
-  room_messages = assisgn_rooms(speakers)
-  rooms_messages.each do |message|
+  room_messages = assign_rooms(speakers)
+  room_messages.each do |message|
     puts message
   end
 end
